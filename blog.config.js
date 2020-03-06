@@ -3,7 +3,7 @@ module.exports = {
     title: 'BlueBlood Trading Blog',
     author: 'Talaikis',
     description: 'BlueBlood trading solutions blog.',
-    siteUrl: 'http://localhost:3000',
+    siteUrl: 'https://blueblood.talaikis.com',
     image: '/static/logo.svg',
     social: {
       twitter: '@Talaikis'
