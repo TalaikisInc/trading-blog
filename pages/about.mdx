@@ -1,0 +1,19 @@
+import { withRouter } from 'next/router'
+
+import BlogPost from '../components/layouts/blog-post'
+import Page from '../components/layouts/page'
+
+export const meta = {
+  title: 'About',
+  summary: 'About BlueBlood'
+}
+
+export default withRouter(({ children, router }) => (
+  <Page path={router.pathname} meta={meta}>
+    {children}
+  </Page>
+))
+
+BlueBlood is the cryptocurrency, forex and equity trading strategies provider.
+
+This blog was created as a helpful resource for our customers.

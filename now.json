@@ -1,0 +1,8 @@
+{
+  "name": "blueblood-blog",
+  "alias": ["blueblood-blog.now.sh"],
+  "routes": [
+    { "src": "/feed.json", "dest": "/_next/static/feed.json" },
+    { "src": "/blog/(?<page>[^/]+)$", "dest": "/blog?page=$page" }
+  ]
+}

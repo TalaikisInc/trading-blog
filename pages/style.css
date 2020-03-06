@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+}
+
+body {
+  font-kerning: normal;
+  word-wrap: break-word;
+  color: #333;
+  margin: 0;
+}
+
+pre, code {
+  font-family: Consolas, Menlo, Monaco, source-code-pro, "Courier New", monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+pre {
+  border-radius: 10px;
+  overflow: auto;
+  padding: 1em;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #555;
+  text-decoration: underline;
+}
+
+p, pre, ul, ol {
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+}
+
+.container {
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 0 1em;
+  margin: auto;
+}
+
+header {
+  padding: 1em 0;
+  align-items: center;
+}
+
+.svg {
+  -webkit-filter: invert(100%);
+}
+
+  .post-summary {
+    margin-top: 1em;
+  }
+
+  article {
+    margin-bottom: 2em;
+  }
+
+  footer {
+    padding: 1em 0;
+  }
+
+  footer, p {
+    margin-top: 2em;
+  }
+
+  nav {
+    display: flex;
+    float: right;
+  }
+
+.copyright {
+  font-size: .7em;
+}
