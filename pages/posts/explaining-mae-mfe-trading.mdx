@@ -17,7 +17,7 @@ export default withRouter(({ children, router }) => (
 
 MAE is maximum adverse excursion, the negative difference between the price the strategy recommends to buy and lowest low.
 
-Similarly, MFE is maximum favorable excurons, the positive difference between price of the signal and highest high.
+Similarly, MFE is maximum favorable excursion, the positive difference between price of the signal and highest high.
 
 ## Why it's important?
 
@@ -31,10 +31,10 @@ We generate MAE and MFE distribution plots for each strategy. An example:
 
 How you can profit using this data? Let's say, majority (80%) of MAEs and MFEs are within 200 and strategy stats show an average of 180 USD.
 
-Let's say, strategy generates a buy signal at 9100 USD. You can buy at that price and expect results shown in the retuns plot, or you can just set buy limit at 9100 minus 200 (80% of MAEs) at 8900 and set take profit at recommended price + 200 USD (majority of MFEs).
+Let's say, strategy generates a buy signal at 9100 USD. You can buy at that price and expect results shown in the returns plot, or you can just set buy limit at 9100 minus 200 (80% of MAEs) at 8900 and set take profit at recommended price + 200 USD (majority of MFEs).
 
 You probably will miss 20% of trades using this execution strategy, but will make much more than are shown in the close to close returns and have less of a drawdown.
 
 ## Notes
 
-MAE will usually be higher in bad times and MFE will be higher in good times, so we recommned to use appropriate position management strategy to catch more of the MAE and MFE.
+MAE will usually be higher in bad times and MFE will be higher in good times, so I recommend to use appropriate position management strategy to catch more of the MAE and MFE.
