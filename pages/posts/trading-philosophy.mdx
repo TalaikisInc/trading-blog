@@ -1,11 +1,13 @@
 import { withRouter } from 'next/router'
 
 import BlogPost from '../../components/layouts/blog-post'
+import { siteMeta } from '../../blog.config'
 
 export const meta = {
   published: true,
   publishedAt: '2019-01-05',
   title: 'Trading Philosophy',
+  image: `${siteMeta.siteUrl}/static/s-index.png`,
   summary: 'BlueBlood\'s trading philosophy'
 }
 

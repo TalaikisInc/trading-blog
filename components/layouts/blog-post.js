@@ -16,7 +16,7 @@ function BlogPost ({ path, meta, children }) {
   const nextPost = blogposts[currentPostIndex - 1]
 
   return (
-    <Layout pageTitle={meta.title} ogImage={meta.image}>
+    <Layout path={path} pageTitle={meta.title} ogImage={meta.image} description={meta.summary}>
       <SyntaxHighlight />
       <article>
         <header>
