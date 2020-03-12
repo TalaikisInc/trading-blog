@@ -35,8 +35,6 @@ module.exports = withMDX({
       }
     }
 
-    config.resolve.modules.push(resolve(__dirname, './'))
-
     return config
-  },
+  }
 })

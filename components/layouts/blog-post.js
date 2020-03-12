@@ -1,7 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
 
-import { siteMeta } from '../../blog.config'
 import Layout from './default'
 import SyntaxHighlight from '../syntax-highlight'
 import PublishedAt from '../utils/published-at'
