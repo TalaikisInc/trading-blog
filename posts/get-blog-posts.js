@@ -1,7 +1,7 @@
 const { readFileSync, readdirSync } = require('fs')
 const { join } = require('path')
 
-const DIR = join(__dirname, '../pages/posts/')
+const DIR = join(process.cwd(), '/pages/posts/')
 const META = /export\s+const\s+meta\s+=\s+({[\s\S]*?\n})/
 const files = readdirSync(DIR).filter((file) => file.endsWith('.md') || file.endsWith('.mdx'))
 
