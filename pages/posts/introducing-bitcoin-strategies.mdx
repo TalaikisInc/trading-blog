@@ -19,9 +19,11 @@ export default withRouter(({ children, router }) => (
 ## Strategies
 
 * [One](#one)
+* [One 2.0](#one2)
 * [One filtered](#filtered)
 * [SK One](#sk)
 * [Pi One](#pi)
+* [Pi 2.0](#pi2)
 * [Portfolio of strategies](#idx)
 
 All strategies are based on quantitative alpha models.
@@ -61,6 +63,42 @@ This strategy is long only Bitcoin strategy based on fundamentals, trades once a
 #### Rolling MFE, $
 
 ![](https://blue-images.talaikis.com/mfe-rolling-one.png)
+
+### <a name="one2"></a>One 2.0
+
+This strategy is long only Bitcoin strategy based on Bitcoin fundamentals, trades once a day. Pricing data is from Bitfinex.
+
+#### Returns, %
+
+![](https://blue-images.talaikis.com/one-2-returns.png)
+
+#### Drawdown, %
+
+![](https://blue-images.talaikis.com/one-2-drawdown.png)
+
+#### Yearly returns, %
+
+![](https://blue-images.talaikis.com/one-2-yearly-returns.png)
+
+#### Monthly returns, %
+
+![](https://blue-images.talaikis.com/one-2-monthly-returns.png)
+
+#### MAE distribution, $
+
+![](https://blue-images.talaikis.com/mae-one-2.png)
+
+#### MFE distribution, $
+
+![](https://blue-images.talaikis.com/mfe-one-2.png)
+
+#### Rolling MAE, $
+
+![](https://blue-images.talaikis.com/mae-rolling-one-2.png)
+
+#### Rolling MFE, $
+
+![](https://blue-images.talaikis.com/mfe-rolling-one-2.png)
 
 ### <a name="filtered"></a>One Filtered
 
@@ -172,11 +210,51 @@ This is long only Bitcoin strategy using pattern recognition.
 
 ![](https://blue-images.talaikis.com/mfe-rolling-pi-one.png)
 
+### <a name="pi2"></a>Pi 2.0
+
+This is long only Bitcoin strategy using pattern recognition.
+
+#### Returns, %
+
+![](https://blue-images.talaikis.com/pi-2-returns.png)
+
+#### Drawdown, %
+
+![](https://blue-images.talaikis.com/pi-2-drawdown.png)
+
+#### Yearly returns, %
+
+![](https://blue-images.talaikis.com/pi-2-yearly-returns.png)
+
+#### Monthly returns, %
+
+![](https://blue-images.talaikis.com/pi-2-monthly-returns.png)
+
+#### MAE distribution, $
+
+![](https://blue-images.talaikis.com/mae-pi-2.png)
+
+#### MFE distribution, $
+
+![](https://blue-images.talaikis.com/mfe-pi-2.png)
+
+#### Rolling MAE, $
+
+![](https://blue-images.talaikis.com/mae-rolling-pi-2.png)
+
+#### Rolling MFE, $
+
+![](https://blue-images.talaikis.com/mfe-rolling-pi-2.png)
+
 ### <a name="idx"></a> Portfolio of strategies
 
 This is simple portfolio of One, One Filtered, SK One, Pi One strategies using simple allocation technique (see below).
 
 I'll improve this over time, but even simple allocation makes drawdowns (and, as a consequence, Sharpe ratio) better.
+
+Correlations of strategies:
+
+![](https://blue-images.talaikis.com/Strategies-heatmap.png)
 
 #### Returns, %
 
