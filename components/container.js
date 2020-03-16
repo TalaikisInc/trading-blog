@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 const Container = ({ children }) => (
   <Fragment>
-    <div className="container">{children}</div>
+    <div className="container">{ children }</div>
   </Fragment>
 )
 

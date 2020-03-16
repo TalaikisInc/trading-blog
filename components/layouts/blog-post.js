@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Layout from './default'
-import SyntaxHighlight from '../syntax-highlight'
 import PublishedAt from '../utils/published-at'
 import blogposts from '../../posts/index'
 import NextPrevPost from '../next-prev-post'
@@ -15,10 +14,9 @@ function BlogPost ({ path, meta, children }) {
 
   return (
     <Layout path={path} pageTitle={meta.title} ogImage={meta.image} description={meta.summary}>
-      <SyntaxHighlight />
       <article>
         <header>
-          <h1 className="display-4">{meta.title}</h1>
+          <h1 className="display-4">{ meta.title }</h1>
 
           <div>
             <PublishedAt date={meta.publishedAt} link={path} />
@@ -26,7 +24,7 @@ function BlogPost ({ path, meta, children }) {
         </header>
         <div>{ children }</div>
         <footer>
-          {(previousPost || nextPost) && (
+          { (previousPost || nextPost) && (
             <div>
               {previousPost && (
                 <NextPrevPost
@@ -34,14 +32,15 @@ function BlogPost ({ path, meta, children }) {
                   path={previousPost.path}
                   position="previous"
                 />
-              )}
-              {nextPost && (
+              )
+              }
+              { nextPost && (
                 <NextPrevPost
                   title={nextPost.title}
                   path={nextPost.path}
-                  position="next"
-                />
-              )}
+                  position="next" />
+              )
+              }
             </div>
           )}
         </footer>
