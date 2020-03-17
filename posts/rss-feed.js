@@ -10,8 +10,6 @@ const feedOptions = {
   feed_url: `${siteMeta.siteUrl}/feed.rss`,
   site_url: siteMeta.siteUrl,
   image_url: `${siteMeta.siteUrl}/static/apple-touch-icon-152x152.png`,
-  author: 'Tadas Talaikis',
-  webMaster: 'Tadas Talaikis',
   copyright: '2019 Tadas Talaikis',
   language: 'en',
   categories: ['trading', 'quantitative trading', 'finance', 'python', 'retirement']
