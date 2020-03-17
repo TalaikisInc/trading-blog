@@ -1,31 +1,32 @@
 const { writeFileSync } = require('fs')
 const { join } = require('path')
+const RSS = require('rss')
 
 const posts = require('./get-blog-posts')
 const { siteMeta } = require('../blog.config')
-
-const feed = {
-  version: 'https://jsonfeed.org/version/1',
+const feedOptions = {
   title: siteMeta.title,
-  home_page_url: siteMeta.siteUrl,
-  feed_url: `${siteMeta.siteUrl}/feed.json`,
   description: siteMeta.description,
-  icon: `${siteMeta.siteUrl}/static/apple-touch-icon-152x152.png`,
-  favicon: `${siteMeta.siteUrl}/favicon.ico`,
-  author: {
-    name: siteMeta.author,
-    url: siteMeta.siteUrl
-  },
-  items: posts.map(post => ({
-    id: `${siteMeta.siteUrl}${post.path}`,
-    url: `${siteMeta.siteUrl}${post.path}`,
-    title: post.title,
-    content_text: `${post.summary} - ${siteMeta.siteUrl}${post.path}`,
-    summary: post.summary,
-    image: `${siteMeta.siteUrl}${post.image}`,
-    date_published: post.publishedAt,
-    author: siteMeta.author
-  }))
+  feed_url: `${siteMeta.siteUrl}/feed.rss`,
+  site_url: siteMeta.siteUrl,
+  image_url: `${siteMeta.siteUrl}/static/apple-touch-icon-152x152.png`,
+  author: 'Tadas Talaikis',
+  webMaster: 'Tadas Talaikis',
+  copyright: '2019 Tadas Talaikis',
+  language: 'en',
+  categories: ['trading', 'quantitative trading', 'finance', 'python', 'retirement']
 }
+const rss = new RSS(feedOptions)
 
-writeFileSync(join('./.next/static', 'feed.json'), JSON.stringify(feed))
+posts.map((post) => rss.item({
+  guid: post.path,
+  url: `${siteMeta.siteUrl}${post.path}`,
+  title: post.title,
+  description: `${post.summary} - ${siteMeta.siteUrl}${post.path}`,
+  date: post.publishedAt,
+  author: siteMeta.author
+}))
+
+const xml = rss.xml({ indent: true })
+
+writeFileSync(join('./.next/static', 'feed.rss'), xml)

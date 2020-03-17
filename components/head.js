@@ -12,7 +12,7 @@ const Head = (props) => (
     <title>{ props.title ? `${props.title} - ${siteMeta.title}` : siteMeta.title }</title>
     <meta name="description" content={props.description || defaultDescription} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="alternate" title="RSS Feed" type="application/json" href={`${siteMeta.siteUrl}/feed.json`} />
+    <link rel="alternate" title="RSS Feed" type="application/json" href={`${siteMeta.siteUrl}/feed.rss`} />
     { props.url === '/' ? <Fragment>
       <link href={siteMeta.siteUrl} rel="canonical" />
       <link href={siteMeta.siteUrl} rel="home" />
