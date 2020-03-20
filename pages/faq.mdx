@@ -1,0 +1,45 @@
+import { withRouter } from 'next/router'
+
+import BlogPost from '../components/layouts/blog-post'
+import Page from '../components/layouts/page'
+
+export const meta = {
+  title: 'FAQ',
+  summary: 'Frequenty Asked Questions about BlueBlood services.'
+}
+
+export default withRouter(({ children, router }) => (
+  <Page path={router.pathname} meta={meta}>
+    {children}
+  </Page>
+))
+
+* [What is the minimum capital required?](#2)
+* [How to interpret signal values?](#1)
+* [Where can I see live returns?](#3)
+* [When are tradign signals updated?](#4)
+
+
+### <a name="2"></a>What is the minimum capital required?
+
+You can calculate your minimum capital required using this formula:
+
+```python
+minimum_capital = (MAE + bitcoin_price + max_drawdown) * leverage_factor
+```
+
+This is only minimum recommendation, in most cases you need more than just that.
+
+### <a name="1"></a>How to interpret signal values?
+
+Signal 1 means 'buy' or 'hold', -1 - sell short, 0 - close existing positon.
+
+Signal below 1 means that you should downscale your usual position size. For example, if you trade 10 Bitcoins for strategy A, and signal is 0.25, then you should buy 2.5 Bitcoins instead of 10.
+
+### <a name="3"></a>Where can I see live returns?
+
+We have API endpoints for live trading strategies returns, updated every day. Or you can just visit [performance](https://blueblood.talaikis.com/performance) page, where you'll find charts of the returns. Charts are also updated daily.
+
+### <a name="4"></a>When are tradign signals updated?
+
+Bitcoin trading signals are generated 0:01 GMT time each day.
