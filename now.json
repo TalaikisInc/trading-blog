@@ -1,6 +1,4 @@
 {
-  "alias": ["blueblood.talaikis.com"],
-  "version": 2,
   "routes": [
     { "src": "/feed.rss", "dest": "/_next/static/feed.rss" },
     { "src": "/blog/(?<page>[^/]+)$", "dest": "/blog?page=$page" }
