@@ -75,12 +75,16 @@ Example API response:
 
 Data points are indexed using Unix epoch timestamps.
 
-* "date" - human readable date format
+* "date" - human readable date
 * "signal" - 1 - buy, -1 - sell short, 0 - close position
-* "returns" - yesterday returns
-* "cumulative" - cumulative stategy returns to the date
-* "drawdown" - drawdown for the day
-* "limit" - recommended limit price at which to buy, sell short, close position
+* "returns" - yesterday returns in percents
+* "cumulative" - cumulative stategy returns to the date in percents
+* "drawdown" - drawdown for the day in percents
+* "limit" - it's recommended price to buy at or below, close or sell short at or above. If you can do better than this price, your profit will be higher than stated in the rolling returns. For more, see [Exploring MAE and MFE in trading](https://blueblood.talaikis.com/posts/explaining-mae-mfe-trading)
+
+## Fees
+
+We calculated max 0.1% fees of Bitfinex. If you can get lower fees, then price at whcih you should buy Bitcoin can be higher by the amount you save on fees or those savings would add to your surplus profit over rolling returns.
 
 ## When signals are generated?
 
