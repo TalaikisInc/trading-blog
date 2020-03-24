@@ -1,10 +1,11 @@
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 
 const NextPrevPost = ({ title, path, position }) => {
   const isNext = position === 'next'
   return (
-    <>
+    <Fragment>
       <Link href={path}>
         <a>
           <small>Read {position} post </small>
@@ -19,7 +20,7 @@ const NextPrevPost = ({ title, path, position }) => {
           ${isNext ? 'grid-column: 2 / 2;' : ''}
         }
       `}</style>
-    </>
+    </Fragment>
   )
 }
 

@@ -6,9 +6,9 @@ function Page ({ meta, path, children }) {
     <Layout path={path} pageTitle={meta.title} description={meta.summary} ogImage={meta.image}>
       <article>
         <header>
-          <h1>{meta.title}</h1>
+          <h1>{ meta.title }</h1>
         </header>
-        <div>{children}</div>
+        <div>{ children }</div>
       </article>
     </Layout>
   )
