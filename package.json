@@ -2,7 +2,6 @@
   "name": "trading-blog",
   "scripts": {
     "dev": "next",
-    "build:js": "next build",
     "start": "next start",
     "build": "next build && npm run build:rss && next export",
     "build:rss": "node ./.next/serverless/posts/rss-feed.js",
