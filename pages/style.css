@@ -21,14 +21,14 @@ padding: 1em;
 }
 
 a {
-color: #555;
-text-decoration: none;
-cursor: pointer;
+  color: #303f9f;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
-color: #555;
-text-decoration: underline;
+  color: #303f9f;
+  text-decoration: underline;
 }
 
 .nav-link {
