@@ -8,9 +8,13 @@ export const meta = {
   summary: 'BlueBlood quantitative tading strategies performance'
 }
 
-export default withRouter(({ children, router }) => (
-  <Page path={router.pathname} meta={meta}>
-    {children}
+export async function getStaticProps() {
+  return { props: { stats: 'test' } }
+}
+
+export default withRouter(({ children, router, stats }) => (
+  <Page path={router.pathname} meta={meta} stats={stats}>
+    { children }
   </Page>
 ))
 
@@ -20,6 +24,8 @@ export default withRouter(({ children, router }) => (
 * [Bitcoin One 2.0](#one2)
 * [Bitcoin F](#f)
 * [Bitcoin S](#sk)
+* [Bitcoin S 2.0](#s2)
+* [Bitcoin S 3.0](#s3)
 * [Bitcoin Pi](#pi)
 * [Bitcoin Pi 2.0](#pi2)
 * [Portfolio of strategies](#idx)
@@ -116,6 +122,54 @@ export default withRouter(({ children, router }) => (
 #### Weekly returns, %
 
 ![Bitcoin S weekly returns](https://blue-images.talaikis.com/s-weekly-returns.png "Bitcoin S weekly returns")
+
+
+### <a name="s2"></a><a href="/bitcoin-s-2-trading-strategy">Bitcoin S 2.0</a>
+
+This is long only, weekly Bitcoin strategy, using statistical model.
+
+#### Returns, %
+
+![Bitcoin S 2.0 Returns](https://blue-images.talaikis.com/s-2-returns.png "Bitcoin S 2.0 Returns")
+
+#### Drawdown, %
+
+![Bitcoin S 2.0 Drawdown](https://blue-images.talaikis.com/s-2-drawdown.png "Bitcoin S 2.0 Drawdown")
+
+#### Yearly returns, %
+
+![Bitcoin S 2.0 Yearly returns](https://blue-images.talaikis.com/s-2-yearly-returns.png "Bitcoin S 2.0 Yearly returns")
+
+#### Monthly returns, %
+
+![Bitcoin S 2.0 Monthly returns](https://blue-images.talaikis.com/s-2-monthly-returns.png "Bitcoin S 2.0 Monthly returns")
+
+#### Weekly returns, %
+
+![Bitcoin S 2.0 Weekly returns](https://blue-images.talaikis.com/s-2-weekly-returns.png "Bitcoin S 2.0 Weekly returns")
+
+
+### <a name="s3"></a><a href="/bitcoin-s-3-trading-strategy">Bitcoin S 3.0</a>
+
+#### Returns, %
+
+![Bitcoin S 3.0 Returns](https://blue-images.talaikis.com/s-3-returns.png "Bitcoin S 3.0 Returns")
+
+#### Drawdown, %
+
+![Bitcoin S 3.0 Drawdown](https://blue-images.talaikis.com/s-3-drawdown.png "Bitcoin S 3.0 Drawdown")
+
+#### Yearly returns, %
+
+![Bitcoin S 3.0 Yearly returns](https://blue-images.talaikis.com/s-3-yearly-returns.png "Bitcoin S 3.0 Yearly returns")
+
+#### Monthly returns, %
+
+![Bitcoin S 3.0 Monthly returns](https://blue-images.talaikis.com/s-3-monthly-returns.png "Bitcoin S 3.0 Monthly returns")
+
+#### Weekly returns, %
+
+![Bitcoin S 3.0 Weekly returns](https://blue-images.talaikis.com/s-3-weekly-returns.png "Bitcoin S 3.0 Weekly returns")
 
 
 ### <a name="pi"></a><a href="/bitcoin-pi-trading-strategy">Bitcoin Pi</a>

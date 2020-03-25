@@ -8,9 +8,13 @@ export const meta = {
   summary: 'About BlueBlood'
 }
 
-export default withRouter(({ children, router }) => (
-  <Page path={router.pathname} meta={meta}>
-    {children}
+export async function getStaticProps() {
+  return { props: { stats: 'test' } }
+}
+
+export default withRouter(({ children, router, stats }) => (
+  <Page path={router.pathname} meta={meta} stats={stats}>
+    { children }
   </Page>
 ))
 

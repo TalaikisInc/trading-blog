@@ -1,4 +1,5 @@
 import { withRouter } from 'next/router'
+import fetch from 'node-fetch'
 
 import BlogPost from '../components/layouts/blog-post'
 import Page from '../components/layouts/page'
@@ -8,9 +9,15 @@ export const meta = {
   summary: 'BlueBlood quantitative Bitcoin trading strategies portfolio signals.'
 }
 
-export default withRouter(({ children, router }) => (
-  <Page path={router.pathname} meta={meta}>
-    {children}
+export async function getStaticProps() {
+  const res = await fetch('https://api.talaikis.com/v1.0/stats/index')
+  const stats = await res.json()
+  return { props: { stats } }
+}
+
+export default withRouter(({ children, router, stats }) => (
+  <Page path={router.pathname} meta={meta} stats={stats}>
+    { children }
   </Page>
 ))
 
@@ -45,8 +52,14 @@ As a consequence, our trading strategies portfolio (index) reaches lower risk to
 
 * Base URL: https://blueblood-bitcoin-trading-signals.p.rapidapi.com
 * Strategy endpoint: /v1.0/signals/idx
+* Statistics: /v1.0/stats/idx
+* Yearly returns: /v1.0/returns-yearly/idx
+* Monthly returns: /v1.0/returns-monthly/idx
+* Weekly returns: /v1.0/returns-weekly/idx
+* MAE: /v1.0/mae/idx
+* MFE: /v1.0/mfe/idx
 
-or:
+or access all trading signals:
 
 ```json
 /v1.0/last-signals/all
@@ -82,7 +95,7 @@ Example API response:
 Data points are indexed using Unix epoch timestamps.
 
 * "date" - human readable date
-* "signal" - 1 - buy, -1 - sell short, 0 - close position
+* "signal" - signals for tomorow: > 0 - buy, < 0 - sell short, 0 - close position
 * "returns" - yesterday returns in percents
 * "cumulative" - cumulative stategy returns to the date in percents
 * "drawdown" - drawdown for the day in percents
@@ -94,4 +107,10 @@ We calculated max 0.1% fees of Bitfinex. If you can get lower fees, then price a
 
 ## When signals are generated?
 
+Signals for tomorrow are generated 23:50 (11:50 pm) GMT timezone, each day.
+
+So, when data point for "2020-03-20" shows signal = 1, it means, you should buy on "2020-03-21" at "2020-03-20" close. If you use MAE and MFE optimization, you can just place limit orders that should be valiod for the signal day ("2020-03-20" 11:50 pm - "2020-03-21").
+
 ## Subscribe and start winning
+
+## Trading strategy statistics
