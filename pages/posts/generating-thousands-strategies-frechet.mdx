@@ -58,7 +58,7 @@ def rolling_frechet(df, pattern):
     # for each data point since we have initial data for Frechet:
     for i in range(len(pattern), len(df.index)-1):
         try:
-            # bam, don't even got into math
+            # bam, din't even got into math
             f = frdist(P, [[(k+1), df.iloc[i-len(pattern)-1+k]] for k in range(len(pattern))])
             out.append(f)
         except Exception as e:
