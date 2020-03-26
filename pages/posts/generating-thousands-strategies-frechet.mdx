@@ -53,7 +53,7 @@ from pandas import DataFrame
 def rolling_frechet(df, pattern):
     # for each point of pattern add sequence number:
     P = [[(i+1), pattern[i]] for i in range(len(pattern))]
-    # create some empty points, bevause pattern will require past data:
+    # create some empty points, because pattern will require past data:
     out = [0] * (len(pattern)+1)
     # for each data point since we have initial data for Frechet:
     for i in range(len(pattern), len(df.index)-1):
