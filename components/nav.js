@@ -17,6 +17,8 @@ const Nav = () => (
       <Link href="/about">
         <a>About</a>
       </Link>
+    </div>
+    <div className="nav-link">
       <Link href="https://talaikis.com">
         <a>Contact</a>
       </Link>

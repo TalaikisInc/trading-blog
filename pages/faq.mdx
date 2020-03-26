@@ -18,11 +18,23 @@ export default withRouter(({ children, router, stats }) => (
   </Page>
 ))
 
+* [Can I earn more than your performance?](#6)
 * [What is the minimum capital required?](#2)
 * [How to interpret signal values?](#1)
 * [Where can I see live returns?](#3)
-* [When are tradign signals updated?](#4)
+* [When are trading signals updated?](#4)
+* [What is best strategy to use?](#5)
+* [Where I can find statistics about the strategies?](#7)
 
+### <a name="6"></a>Can I earn more than your performance?
+
+Of course! Our performance shows close to close returns, but almost always there are differences between signal's closing price and low (MAE for longs),and high (MFE for longs).
+
+If you can catch those differences, then your performance can be much higher than we record.
+
+MAE is maximum adverse excursion, MFE is maximum favorable excursion. To help you, I provide those on our API and on [this page](https://blueblood.talaikis.com/posts/introducing-bitcoin-strategies).
+
+Also, read my post on [MAEs and MFEs](https://blueblood.talaikis.com/posts/explaining-mae-mfe-trading).
 
 ### <a name="2"></a>What is the minimum capital required?
 
@@ -32,7 +44,15 @@ You can calculate your minimum capital required using this formula:
 minimum_capital = (MAE + bitcoin_price + max_drawdown) * leverage_factor
 ```
 
-This is only minimum recommendation, in most cases you need more than just that.
+For example, if Bitcoin costs 5,000, average MAE is 200, and drawdown is 30%, then:
+
+```python
+minimum_capital = (200 + 5000 + 0.3*5000) = 6,700
+```
+
+So, minimum capital for 1 bitcoin would be 6,700 USD, for 0.1 - 670 USD, for 0.01 - 67 USD and so on.
+
+This is only minimum recommendation, in most cases you need more than just that. But if you will be able to catch sometimes huge MAE and MFE, then you'll grow that quickly.
 
 ### <a name="1"></a>How to interpret signal values?
 
@@ -46,4 +66,14 @@ We have API endpoints for live trading strategies returns, updated every day. Or
 
 ### <a name="4"></a>When are tradign signals updated?
 
-Bitcoin trading signals are generated 0:01 GMT time each day.
+Bitcoin trading signals are generated 23:50 GMT time each day.
+
+### <a name="5"></a>What is best strategy to use?
+
+It depends on your [risk aversion](https://en.wikipedia.org/wiki/Risk_aversion). Trading has one rule - higher returns are always associated with higher risk. For example, [Bitcoin Pi 2.0](https://blueblood.talaikis.com/bitcoin-pi-2-trading-strategy) most of the years generated over 50 percent a year, but with hefty 35 percent max drawdown. If you are not feeling well with 35 percent drawdown, then just go for another strategy.
+
+For most users I would recommend to just use portfolio of strategies, because it uses many models and distributes its risk among them.
+
+### <a name="7"></a>Where I can find statistics about the strategies?
+
+[Performance](https://blueblood.talaikis.com/performance) page listing the stats has links to strategy description pages, which also include live strategy statistics.
