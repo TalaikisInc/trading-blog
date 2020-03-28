@@ -9,6 +9,7 @@ const mapping = {
   average_loss: { t: 'Average loss', p: '%', typ: 1 },
   total_winning_days: { t: 'Total winning', p: ' days', typ: 0 },
   total_losing_days: { t: 'Total losing', p: ' days', typ: 0 },
+  win_years: { t: 'Win years', p: '%', typ: 1 },
   win_rate: { t: 'Win rate', p: '%', typ: 1 },
   average_mae: { t: 'Average MAE', p: '$', typ: 1 },
   average_mfe: { t: 'Average MFE', p: '$', typ: 1 },

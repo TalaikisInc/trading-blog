@@ -14,9 +14,10 @@
     "babel-plugin-macros": "^2.8.0",
     "babel-plugin-preval": "^5.0.0",
     "bootstrap": "^4.4.1",
+    "isomorphic-unfetch": "^3.0.0",
     "lodash.range": "^3.2.0",
     "mdx-prism": "^0.3.1",
-    "next": "^9.3.1",
+    "next": "^9.3.2",
     "pagination": "^0.4.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -35,10 +36,8 @@
     "fibers": "^4.0.2",
     "jquery": "^3.4.1",
     "node-fetch": "^2.6.0",
-    "node-sass": "^4.13.1",
-    "npm-check-updates": "^4.0.5",
+    "npm-check-updates": "^4.1.0",
     "popper.js": "^1.16.1",
-    "rehype": "^9.0.1",
-    "sass": "^1.26.3"
+    "rehype": "^9.0.1"
   }
 }
