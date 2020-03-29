@@ -1,0 +1,64 @@
+import { withRouter } from 'next/router'
+
+import BlogPost from '../../components/layouts/blog-post'
+
+export const meta = {
+  published: true,
+  publishedAt: '2020-03-29',
+  title: 'How to start using BlueBlood Bitcoin signals',
+  image: 'https://blueblood.talaikis.com/static/2-2.png',
+  summary: 'A to Z instruction on how to use BlueBlood Bitcoin signals.'
+}
+
+export default withRouter(({ children, router }) => (
+  <BlogPost path={router.pathname} meta={meta}>
+    { children }
+  </BlogPost>
+))
+
+## Step 1 - Get API key
+
+Go to our [plans](https://rapidapi.com/talaikis.tadas/api/blueblood-bitcoin-trading-signals/pricing) page.
+
+Select Basic plan, this will be enough to cover all the signals from all strategies for each day<sup>*</sup>:
+
+![Subscription plans](/static/1-1.png "Subscription plans")
+
+You will be prompted to sign up page. Fill ut the form or just click "Sign up with Facebook" or "Sign up with Google":
+
+![Sign up page](/static/1-2.png "Sign up page")
+
+After sign up you will be redirected back to plans page. Click "Select plan" again. You will be redirected to payment page: Fill out the form and click "Subscribe":
+
+![Subsribe](/static/1-4.png "Subsribe")
+
+Then you will be redirected to endpoints, and if not - click "Endpoints".
+
+At the right side copy your key and save it to secure place<sup>**</sup>:
+
+![Endpoints](/static/1-3.png "Endpoints")
+
+Proceed to the next step:
+
+<sup>*</sup> Note that 50 free requests a month are temporary, I plan to remove this plan in the near future.
+<sup>**</sup> If you share your key with someone, remember that all requests above free limit are payable.
+
+## Step 2 - Getting signals
+
+Go to and bookmark [helper app](https://bitcoin.talaikis.com/)
+
+Paste your API key:
+
+![Enter API key in this box](/static/2-1.png "Enter API key in this box")
+
+Click Submit and you'll see something like this:
+
+![Bitcoin signals](/static/2-2.png "Bitcoin signals")
+
+Now you can use signals from the strategies you want.
+
+I recommend using [Portfolio of Bitcoin strategies](https://blueblood.talaikis.com/bitcoin-idx-trading-strategy).
+
+If you prefer trading just once a week - use [Bitcoin S 2.0](https://blueblood.talaikis.com/bitcoin-s-2-trading-strategy) or [Bitcoin S 3.0](https://blueblood.talaikis.com/bitcoin-s-3-trading-strategy).
+
+If you have questions, send them via form located [here](https://talaikis.com).
