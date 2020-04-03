@@ -4,7 +4,7 @@ module.exports = {
     author: 'Tadas Talaikis',
     description: 'BlueBlood trading solutions blog.',
     siteUrl: 'https://blueblood.talaikis.com',
-    image: 'https://blueblood.talaikis.com/static/logo.svg',
+    image: 'https://blue-images.talaikis.com/reinvest.png',
     social: {
       twitter: '@Talaikis',
       facebook: 'https://www.facebook.com/talaikis/'
