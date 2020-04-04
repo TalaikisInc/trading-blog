@@ -4,6 +4,7 @@ import Layout from './default'
 import PublishedAt from '../utils/published-at'
 import blogposts from '../../posts/index'
 import NextPrevPost from '../next-prev-post'
+import Share from './share'
 
 function BlogPost ({ path, meta, children }) {
   const currentPostIndex = blogposts
@@ -17,10 +18,10 @@ function BlogPost ({ path, meta, children }) {
       <article>
         <header>
           <h1 className="display-4">{ meta.title }</h1>
-
           <div>
             <PublishedAt date={meta.publishedAt} link={path} />
           </div>
+          <Share link={path} />
         </header>
         <div>{ children }</div>
         <footer>

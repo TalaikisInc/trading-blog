@@ -6,7 +6,7 @@ function PublishedAt (props) {
   return (
     <Fragment>
       <Link href={link}>
-        <a href={link} mcolor="#aaa" {...props}>
+        <a href={link} {...props}>
           <time>
             { date }
           </time>
