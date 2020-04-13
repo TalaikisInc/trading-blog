@@ -10,7 +10,7 @@ export const meta = {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://api.talaikis.com/v1.0/stats/index')
+  const res = await fetch('https://api.talaikis.com/v1.0/stats/idx')
   const stats = await res.json()
   return { props: { stats } }
 }
