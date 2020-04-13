@@ -5,12 +5,12 @@ import BlogPost from '../components/layouts/blog-post'
 import Page from '../components/layouts/page'
 
 export const meta = {
-  title: 'Bitcoin One trading strategy',
-  summary: 'BlueBlood quantitative Bitcoin One trading strategy signals.'
+  title: 'Bitcoin V trading strategy',
+  summary: 'BlueBlood quantitative Bitcoin V trading strategy signals.'
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://api.talaikis.com/v1.0/stats/one')
+  const res = await fetch('https://api.talaikis.com/v1.0/stats/v')
   const stats = await res.json()
   return { props: { stats } }
 }
@@ -21,16 +21,15 @@ export default withRouter(({ children, router, stats }) => (
   </Page>
 ))
 
-## What is Bitcoin One?
+## What is Bitcoin V?
 
-Bitcoin One is quantitative trading strategy in Bitcoin, which uses [quantitative trading models](https://blueblood.talaikis.com/posts/trading-philosophy) for trading decisions making.
+Bitcoin V is quantitative trading strategy in Bitcoin, which uses [quantitative trading models](https://blueblood.talaikis.com/posts/trading-philosophy) for trading decisions making.
 
-Trading decision making model (alpha) of this strategy is based on proprietary algorithmic indicators, which use Bitcoin returns structures.
+Trading decision making model (alpha) of this strategy is based on volatility model.
 
-![Bitcoin One Returns](https://blue-images.talaikis.com/one-returns.png "Bitcoin One Returns")
+![Bitcoin V Returns](https://blue-images.talaikis.com/v-returns.png "Bitcoin V Returns")
 
 * [More Bitcoin One stats](https://blueblood.talaikis.com/performance)
-* [Initial post](https://blueblood.talaikis.com/posts/introducing-bitcoin-strategies)
 
 # Why algorithmic trading?
 
@@ -45,13 +44,13 @@ There are many reasons:
 ## API Endpoint for the trading strategy
 
 * Base URL: https://blueblood-bitcoin-trading-signals.p.rapidapi.com
-* Strategy endpoint: /v1.0/signals/one
-* Statistics: /v1.0/stats/one
-* Yearly returns: /v1.0/returns-yearly/one
-* Monthly returns: /v1.0/returns-monthly/one
-* Weekly returns: /v1.0/returns-weekly/one
-* MAE: /v1.0/mae/one
-* MFE: /v1.0/mfe/one
+* Strategy endpoint: /v1.0/signals/v
+* Statistics: /v1.0/stats/v
+* Yearly returns: /v1.0/returns-yearly/v
+* Monthly returns: /v1.0/returns-monthly/v
+* Weekly returns: /v1.0/returns-weekly/v
+* MAE: /v1.0/mae/v
+* MFE: /v1.0/mfe/v
 
 or access all trading signals:
 
