@@ -1,4 +1,3 @@
-const { resolve } = require('path')
 const withMDX = require('@zeit/next-mdx')({
   extension: /.mdx?$/,
   options: {

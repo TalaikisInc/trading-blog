@@ -34,17 +34,17 @@ const Blog = ({ router, page = 1 }) => {
         )) }
       <div className="pagination">
         { previous && (
-          <Link href={`/blog?page=${previous}`} as={`/blog/${previous}`}>
+          <Link href={`/?page=${previous}`} as={`/blog/${previous}`}>
             <a>&laquo; Previous</a>
           </Link>
         ) }
         { range.map((page, index) => (
-          <Link key={index} href={`/blog?page=${page}`} as={`/blog/${page}`}>
+          <Link key={index} href={`/?page=${page}`} as={`/blog/${page}`}>
             <a>{page}</a>
           </Link>
         )) }
         { next && (
-          <Link href={`/blog?page=${next}`} as={`/blog/${next}`}>
+          <Link href={`/?page=${next}`} as={`/blog/${next}`}>
             <a>Next &raquo;</a>
           </Link>
         ) }
