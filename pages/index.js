@@ -32,35 +32,23 @@ const Blog = ({ router, page = 1 }) => {
             date={post.publishedAt}
             path={post.path} />
         )) }
-      <ul>
+      <div className="pagination">
         { previous && (
-          <li>
-            <Link href={`/blog?page=${previous}`} as={`/blog/${previous}`}>
-              <a>Previous</a>
-            </Link>
-          </li>
+          <Link href={`/blog?page=${previous}`} as={`/blog/${previous}`}>
+            <a>Previous</a>
+          </Link>
         ) }
         { range.map((page, index) => (
-          <li key={index}>
-            <Link key={index} href={`/blog?page=${page}`} as={`/blog/${page}`}>
-              <a>{page}</a>
-            </Link>
-          </li>
+          <Link key={index} href={`/blog?page=${page}`} as={`/blog/${page}`}>
+            <a>{page}</a>
+          </Link>
         )) }
         { next && (
-          <li>
-            <Link href={`/blog?page=${next}`} as={`/blog/${next}`}>
-              <a>Next</a>
-            </Link>
-          </li>
+          <Link href={`/blog?page=${next}`} as={`/blog/${next}`}>
+            <a>Next</a>
+          </Link>
         ) }
-      </ul>
-      <style jsx>{`
-        a {
-          display: flex;
-          flex-direction: column;
-        }
-      `}</style>
+      </div>
     </Layout>
   )
 }

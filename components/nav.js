@@ -29,7 +29,7 @@ const Nav = () => (
       </Link>
     </div>
     <div className="nav-link">
-      <Link href="https://rapidapi.com/talaikis.tadas/api/blueblood-bitcoin-trading-signals/pricing">
+      <Link href="https://blueblood.talaikis.com/subscribe">
         <a>Subscribe</a>
       </Link>
     </div>

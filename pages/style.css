@@ -277,3 +277,14 @@ border-left: 0.25em solid #ffdc00;
 .share {
   padding-top: 1em;
 }
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
