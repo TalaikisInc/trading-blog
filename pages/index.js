@@ -35,7 +35,7 @@ const Blog = ({ router, page = 1 }) => {
       <div className="pagination">
         { previous && (
           <Link href={`/blog?page=${previous}`} as={`/blog/${previous}`}>
-            <a>Previous</a>
+            <a>&laquo; Previous</a>
           </Link>
         ) }
         { range.map((page, index) => (
@@ -45,7 +45,7 @@ const Blog = ({ router, page = 1 }) => {
         )) }
         { next && (
           <Link href={`/blog?page=${next}`} as={`/blog/${next}`}>
-            <a>Next</a>
+            <a>Next &raquo;</a>
           </Link>
         ) }
       </div>
