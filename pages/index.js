@@ -55,6 +55,12 @@ const Blog = ({ router, page = 1 }) => {
           </li>
         ) }
       </ul>
+      <style jsx>{`
+        a {
+          display: flex;
+          flex-direction: column;
+        }
+      `}</style>
     </Layout>
   )
 }

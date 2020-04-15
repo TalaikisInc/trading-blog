@@ -30,6 +30,28 @@ export default withRouter(({ children, router }) => (
 
 All strategies are based on quantitative alpha models.
 
+### API response
+
+Example of an API response:
+
+```json
+{ "1586476800000": {
+  "date": "2020-04-10",
+  "signal": 1,
+  "returns": 0.0,
+  "cumulative": 247.3032370321,
+  "drawdown": 0.0,
+  "limit": 6868.6245
+}
+```
+
+* "1586476800000" - all responses are indexed by Unix timestamps
+* "date" - Unix timestamp in human readable format
+* "signal" - signal for tomorow: > 0 - buy, < 0 - sell short, 0 - close position, do nothing
+* "returns" - yesterday profit and loss
+* "cumulative" - cumulative returns of the trades
+* "drawdown" - drawdowns of the trades
+* "limit" - limit price
 
 ### <a name="one"></a><a href="/bitcoin-one-trading-strategy">Bitcoin One</a>
 
@@ -55,19 +77,19 @@ This is long only Bitcoin strategy, using returns model.
 
 ![Bitcoin One Weekly returns](https://blue-images.talaikis.com/one-weekly-returns.png "Bitcoin One Weekly returns")
 
-#### MAE distribution, $
+#### MAE distribution, %
 
 ![Bitcoin One MAE distribution](https://blue-images.talaikis.com/mae-one.png "Bitcoin One MAE distribution")
 
-#### MFE distribution, $
+#### MFE distribution, %
 
 ![Bitcoin One MFE distribution](https://blue-images.talaikis.com/mfe-one.png "Bitcoin One MFE distribution")
 
-#### Rolling MAE, $
+#### Rolling MAE, %
 
 ![Bitcoin One Rolling MAE](https://blue-images.talaikis.com/mae-rolling-one.png "Bitcoin One Rolling MAE")
 
-#### Rolling MFE, $
+#### Rolling MFE, %
 
 ![Bitcoin One Rolling MFE](https://blue-images.talaikis.com/mfe-rolling-one.png "Bitcoin One Rolling MFE")
 
@@ -96,19 +118,19 @@ This is long only Bitcoin strategy, using returns model.
 
 ![Bitcoin One 2.0 Weekly returns](https://blue-images.talaikis.com/one-2-weekly-returns.png "Bitcoin One 2.0 Weekly returns")
 
-#### MAE distribution, $
+#### MAE distribution, %
 
 ![Bitcoin One 2.0 MAE distribution](https://blue-images.talaikis.com/mae-one-2.png "Bitcoin One 2.0 MAE distribution")
 
-#### MFE distribution, $
+#### MFE distribution, %
 
 ![Bitcoin One 2.0 MFE distribution](https://blue-images.talaikis.com/mfe-one-2.png "Bitcoin One 2.0 MFE distribution")
 
-#### Rolling MAE, $
+#### Rolling MAE, %
 
 ![Bitcoin One 2.0 Rolling MAE](https://blue-images.talaikis.com/mae-rolling-one-2.png "Bitcoin One 2.0 Rolling MAE")
 
-#### Rolling MFE, $
+#### Rolling MFE, %
 
 ![Bitcoin One 2.0 Rolling MFE](https://blue-images.talaikis.com/mfe-rolling-one-2.png "Bitcoin One 2.0 Rolling MFE")
 
@@ -137,19 +159,19 @@ This is same as Bitcoin One, just uses additional risk filter.
 
 ![Bitcoin F Weekly returns](https://blue-images.talaikis.com/f-weekly-returns.png "Bitcoin F Weekly returns")
 
-#### MAE distribution, $
+#### MAE distribution, %
 
 ![Bitcoin F MAE distribution](https://blue-images.talaikis.com/mae-f.png "Bitcoin F MAE distribution")
 
-#### MFE distribution, $
+#### MFE distribution, %
 
 ![Bitcoin F MFE distribution](https://blue-images.talaikis.com/mfe-f.png "Bitcoin F MFE distribution")
 
-#### Rolling MAE, $
+#### Rolling MAE, %
 
 ![Bitcoin F Rolling MAE](https://blue-images.talaikis.com/mae-rolling-f.png "Bitcoin F Rolling MAE")
 
-#### Rolling MFE, $
+#### Rolling MFE, %
 
 ![Bitcoin F Rolling MFE](https://blue-images.talaikis.com/mfe-rolling-f.png "Bitcoin F Rolling MFE")
 
@@ -178,19 +200,19 @@ This is long only Bitcoin strategy, using some of statistical methods to generat
 
 ![Bitcoin S Weekly returns](https://blue-images.talaikis.com/s-weekly-returns.png "Bitcoin S Weekly returns")
 
-#### MAE distribution, $
+#### MAE distribution, %
 
 ![Bitcoin S MAE distribution](https://blue-images.talaikis.com/mae-s.png "Bitcoin S MAE distribution")
 
-#### MFE distribution, $
+#### MFE distribution, %
 
 ![Bitcoin S MFE distribution](https://blue-images.talaikis.com/mfe-s.png "Bitcoin S MFE distribution")
 
-#### Rolling MAE, $
+#### Rolling MAE, %
 
 ![Bitcoin S Rolling MAE](https://blue-images.talaikis.com/mae-rolling-s.png "Bitcoin S Rolling MAE")
 
-#### Rolling MFE, $
+#### Rolling MFE, %
 
 ![Bitcoin S Rolling MFE](https://blue-images.talaikis.com/mfe-rolling-s.png "Bitcoin S Rolling MFE")
 
@@ -219,19 +241,19 @@ This is long only, weekly Bitcoin strategy, using statistical model.
 
 ![Bitcoin S 2.0 Weekly returns](https://blue-images.talaikis.com/s-2-weekly-returns.png "Bitcoin S 2.0 Weekly returns")
 
-#### MAE distribution, $
+#### MAE distribution, %
 
 ![Bitcoin S 2.0 MAE distribution](https://blue-images.talaikis.com/mae-s-2.png "Bitcoin S 2.0 MAE distribution")
 
-#### MFE distribution, $
+#### MFE distribution, %
 
 ![Bitcoin S 2.0 MFE distribution](https://blue-images.talaikis.com/mfe-s-2.png "Bitcoin S 2.0 MFE distribution")
 
-#### Rolling MAE, $
+#### Rolling MAE, %
 
 ![Bitcoin S 2.0 Rolling MAE](https://blue-images.talaikis.com/mae-rolling-s-2.png "Bitcoin S 2.0 Rolling MAE")
 
-#### Rolling MFE, $
+#### Rolling MFE, %
 
 ![Bitcoin S 2.0 Rolling MFE](https://blue-images.talaikis.com/mfe-rolling-s-2.png "Bitcoin S 2.0 Rolling MFE")
 
@@ -260,19 +282,19 @@ This is long only, weekly Bitcoin strategy, using other strategies.
 
 ![Bitcoin S 3.0 Weekly returns](https://blue-images.talaikis.com/s-3-weekly-returns.png "Bitcoin S 3.0 Weekly returns")
 
-#### MAE distribution, $
+#### MAE distribution, %
 
 ![Bitcoin S 3.0 MAE distribution](https://blue-images.talaikis.com/mae-s-3.png "Bitcoin S 3.0 MAE distribution")
 
-#### MFE distribution, $
+#### MFE distribution, %
 
 ![Bitcoin S 3.0 MFE distribution](https://blue-images.talaikis.com/mfe-s-3.png "Bitcoin S 3.0 MFE distribution")
 
-#### Rolling MAE, $
+#### Rolling MAE, %
 
 ![Bitcoin S 3.0 Rolling MAE](https://blue-images.talaikis.com/mae-rolling-s-3.png "Bitcoin S 3.0 Rolling MAE")
 
-#### Rolling MFE, $
+#### Rolling MFE, %
 
 ![Bitcoin S 3.0 Rolling MFE](https://blue-images.talaikis.com/mfe-rolling-s-3.png "Bitcoin S 3.0 Rolling MFE")
 
@@ -301,19 +323,19 @@ This is long only Bitcoin strategy using pattern recognition.
 
 ![Bitcoin Pi Weekly returns](https://blue-images.talaikis.com/pi-weekly-returns.png "Bitcoin Pi Weekly returns")
 
-#### MAE distribution, $
+#### MAE distribution, %
 
 ![Bitcoin Pi MAE distribution](https://blue-images.talaikis.com/mae-pi.png "Bitcoin Pi MAE distribution")
 
-#### MFE distribution, $
+#### MFE distribution, %
 
 ![Bitcoin Pi MFE distribution](https://blue-images.talaikis.com/mfe-pi.png "Bitcoin Pi MFE distribution")
 
-#### Rolling MAE, $
+#### Rolling MAE, %
 
 ![Bitcoin Pi Rolling MAE](https://blue-images.talaikis.com/mae-rolling-pi.png "Bitcoin Pi Rolling MAE")
 
-#### Rolling MFE, $
+#### Rolling MFE, %
 
 ![Bitcoin Pi Rolling MFE](https://blue-images.talaikis.com/mfe-rolling-pi.png "Bitcoin Pi Rolling MFE")
 
@@ -342,19 +364,19 @@ This is long only Bitcoin strategy using pattern recognition.
 
 ![Bitcoin Pi 2.0 Weekly returns](https://blue-images.talaikis.com/pi-2-weekly-returns.png "Bitcoin Pi 2.0 Weekly returns")
 
-#### MAE distribution, $
+#### MAE distribution, %
 
 ![Bitcoin Pi 2.0 MAE distribution](https://blue-images.talaikis.com/mae-pi-2.png "Bitcoin Pi 2.0 MAE distribution")
 
-#### MFE distribution, $
+#### MFE distribution, %
 
 ![Bitcoin Pi 2.0 MFE distribution](https://blue-images.talaikis.com/mfe-pi-2.png "Bitcoin Pi 2.0 MFE distribution")
 
-#### Rolling MAE, $
+#### Rolling MAE, %
 
 ![Bitcoin Pi 2.0 Rolling MAE](https://blue-images.talaikis.com/mae-rolling-pi-2.png "Bitcoin Pi 2.0 Rolling MAE")
 
-#### Rolling MFE, $
+#### Rolling MFE, %
 
 ![Bitcoin Pi 2.0 Rolling MFE](https://blue-images.talaikis.com/mfe-rolling-pi-2.png "Bitcoin Pi 2.0 Rolling MFE")
 
@@ -387,19 +409,19 @@ Correlations of the strategies:
 
 ![Portfolio of strategies Weekly returns](https://blue-images.talaikis.com/idx-weekly-returns.png "Portfolio of strategies Weekly returns")
 
-#### MAE distribution, $
+#### MAE distribution, %
 
 ![Portfolio of strategies MAE distribution](https://blue-images.talaikis.com/mae-idx.png "Portfolio of strategies MAE distribution")
 
-#### MFE distribution, $
+#### MFE distribution, %
 
 ![Portfolio of strategies MFE distribution](https://blue-images.talaikis.com/mfe-idx.png "Portfolio of strategies MFE distribution")
 
-#### Rolling MAE, $
+#### Rolling MAE, %
 
 ![Portfolio of strategies Rolling MAE](https://blue-images.talaikis.com/mae-rolling-idx.png "Portfolio of strategies Rolling MAE")
 
-#### Rolling MFE, $
+#### Rolling MFE, %
 
 ![Portfolio of strategies Rolling MFE](https://blue-images.talaikis.com/mfe-rolling-idx.png "Portfolio of strategies Rolling MFE")
 
