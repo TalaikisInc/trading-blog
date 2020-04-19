@@ -10,13 +10,13 @@ const feedOptions = {
   feed_url: `${siteMeta.siteUrl}/feed.rss`,
   site_url: siteMeta.siteUrl,
   image_url: `${siteMeta.siteUrl}/static/apple-touch-icon-152x152.png`,
-  copyright: '2019 Tadas Talaikis',
+  copyright: '2019-2020 Tadas Talaikis',
   language: 'en',
-  categories: ['trading', 'quantitative trading', 'finance', 'python', 'retirement']
+  categories: ['trading', 'quantitative trading', 'finance', 'python', 'retirement', 'bitcoin', 'bitcoin arbitrage', 'trading strategies']
 }
 const rss = new RSS(feedOptions)
 
-posts.map((post) => rss.item({
+posts.slice(4).map((post) => rss.item({
   guid: post.path,
   url: `${siteMeta.siteUrl}${post.path}`,
   title: post.title,
