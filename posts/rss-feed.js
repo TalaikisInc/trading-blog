@@ -17,9 +17,9 @@ const feedOptions = {
 const rss = new RSS(feedOptions)
 
 const perFeed = 5
-const l = posts.length
-const start = l > perFeed ? l - perFeed : 0
-posts.slice(start, l).map((post) => rss.item({
+// const l = posts.length
+// const start = l > perFeed ? l - perFeed : 0
+posts.slice(0, perFeed).map((post) => rss.item({
   guid: post.path,
   url: `${siteMeta.siteUrl}${post.path}`,
   title: post.title,
