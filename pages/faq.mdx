@@ -1,6 +1,7 @@
 import { withRouter } from 'next/router'
 
 import Page from '../components/layouts/page'
+import Formula from '../components/formulas/formula'
 
 export const meta = {
   title: 'FAQ',
@@ -27,6 +28,10 @@ export default withRouter(({ children, router, stats }) => (
 * [I don't understand anything about APIs, can I still use your system?](#9)
 * [Are returns shown in stats and charts reinvested?](#10)
 * [I have a question, how I can ask?](#8)
+* [How much of a PnL shown is in sample and out of sample?](#11)
+* [Are all systems long only?](#12)
+* [Are all systems on Bitcoin only?](#13)
+* [What Sharpe formula is used?](#14)
 
 ### <a name="6"></a>Can I earn more than your performance?
 
@@ -96,4 +101,28 @@ Also, you need to note, that if you reinvest, drawdowns also will grow exponenti
 
 Of course! I have created a [helper app](https://bitcoin.talaikis.com/) just for you.
 
-or you can just get signals via SMS/ email with [Ultra](https://rapidapi.com/talaikis.tadas/api/blueblood-bitcoin-trading-signals/pricing) and higher plan.
+Or you can just get signals via SMS/ email with [Pro](https://rapidapi.com/talaikis.tadas/api/blueblood-bitcoin-trading-signals/pricing) and higher plans.
+
+### <a name="11"></a>How much of a PnL shown is in sample and out of sample?
+
+All strategies have half in sample and half out of the sample until March, 2020. Since March, 2020 everything is out of sample ("almost live").
+
+"Almost live", because results don't account for a negligible (<1%) probability that some orders won't hit limit price.
+
+All charts and data are updated daily with yesterday's (last week's) PnL.
+
+Some strategies have risk filters (like F, One, One 2.0), but generally filters aren't working good compared with naked strategies, because they are often lagging.
+
+All our strategies are event based, so if no Bitcoin fundamentals change, their performance shouldn't change much.
+
+### <a name="12"></a>Are all systems long only?
+
+For now, yes, except for arbitrage strategies.
+
+### <a name="13"></a>Are all systems on Bitcoin only?
+
+For now, yes, except for arbitrage strategies, because all other instruments are highly correlated with Bitcoin with worse performance than Bitcoin.
+
+### <a name="14"></a>What Sharpe formula is used?
+
+<Formula tex={`$$sharpe = (returns \\div volatility) \\times \\sqrt{365}$$`} />
