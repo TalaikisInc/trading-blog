@@ -1,37 +1,24 @@
 import React from 'react'
-import Link from 'next/link'
 
 const Nav = () => (
   <nav>
     <div className="nav-link">
-      <Link href="/performance">
-        <a>Performance</a>
-      </Link>
+      <a href="https://blueblood.talaikis.com/performance">Performance</a>
     </div>
     <div className="nav-link">
-      <Link href="/faq">
-        <a>FAQ</a>
-      </Link>
+      <a href="https://blueblood.talaikis.com/faq">FAQ</a>
     </div>
     <div className="nav-link">
-      <Link href="/about">
-        <a>About</a>
-      </Link>
+      <a href="https://blueblood.talaikis.com/about">About</a>
     </div>
     <div className="nav-link">
-      <Link href="https://talaikis.com">
-        <a>Contact</a>
-      </Link>
+      <a href="https://talaikis.com">Contact</a>
     </div>
     <div className="nav-link">
-      <Link href="https://bitcoin.talaikis.com">
-        <a>App</a>
-      </Link>
+      <a href="https://bitcoin.talaikis.com">App</a>
     </div>
     <div className="nav-link">
-      <Link href="https://blueblood.talaikis.com/subscribe">
-        <a>Subscribe</a>
-      </Link>
+      <a href="https://blueblood.talaikis.com/subscribe">Subscribe</a>
     </div>
   </nav>
 )
