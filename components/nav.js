@@ -4,18 +4,18 @@ import Link from 'next/link'
 const Nav = () => (
   <nav>
     <div className="nav-link">
-      <Link href="https://blueblood.talaikis.com/performance">
-        <a href="https://blueblood.talaikis.com/performance">Performance</a>
+      <Link href="/performance">
+        <a href="/performance">Performance</a>
       </Link>
     </div>
     <div className="nav-link">
-      <Link href="https://blueblood.talaikis.com/faq">
-        <a href="https://blueblood.talaikis.com/faq">FAQ</a>
+      <Link href="/faq">
+        <a href="/faq">FAQ</a>
       </Link>
     </div>
     <div className="nav-link">
-      <Link href="https://blueblood.talaikis.com/about">
-        <a href="https://blueblood.talaikis.com/about">About</a>
+      <Link href="/about">
+        <a href="/about">About</a>
       </Link>
     </div>
     <div className="nav-link">
@@ -27,8 +27,8 @@ const Nav = () => (
       <a href="https://bitcoin.talaikis.com">App</a>
     </div>
     <div className="nav-link">
-      <Link href="https://blueblood.talaikis.com/subscribe">
-        <a href="https://blueblood.talaikis.com/subscribe">Subscribe</a>
+      <Link href="/subscribe">
+        <a href="/subscribe">Subscribe</a>
       </Link>
     </div>
   </nav>
