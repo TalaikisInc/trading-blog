@@ -1,0 +1,18 @@
+nav {
+    display: flex;
+    float: right;
+    flex-wrap: wrap;
+    padding-bottom: .9em;
+}
+
+.nav-link {
+    padding-right: 1em;
+}
+
+.copyright {
+    font-size: .7em;
+}
+
+.bottom-nav {
+
+}
