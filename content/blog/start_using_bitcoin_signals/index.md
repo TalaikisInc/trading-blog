@@ -1,7 +1,7 @@
 ---
 title: How to start using BlueBlood Bitcoin signals
 date: "2020-03-29"
-image: ../assets/2-2.png
+image: ../../assets/2-2.png
 description: A to Z instruction on how to use BlueBlood Bitcoin signals.
 ---
 
@@ -11,21 +11,21 @@ Go to our [plans](https://rapidapi.com/talaikis.tadas/api/blueblood-bitcoin-trad
 
 Select Basic plan, this will be enough to cover all the signals from all strategies for ~~each day~~ 10 days a month<sup>*</sup>:
 
-![Subscription plans](../assets/1-1.png "Subscription plans")
+![Subscription plans](../../assets/1-1.png "Subscription plans")
 
 You will be prompted to sign up page. Fill out the form or just click "Sign up with Facebook" or "Sign up with Google":
 
-![Sign up page](../assets/1-2.png "Sign up page")
+![Sign up page](../../assets/1-2.png "Sign up page")
 
 After sign up you will be redirected back to plans page. Click "Select plan" again. You will be redirected to payment page: Fill out the form and click "Subscribe":
 
-![Subsribe](../assets/1-4.png "Subsribe")
+![Subsribe](../../assets/1-4.png "Subsribe")
 
 Then you will be redirected to endpoints, and if not - click "Endpoints".
 
 At the right side copy your key and save it to secure place<sup>**</sup>:
 
-![Endpoints](../assets/1-3.png "Endpoints")
+![Endpoints](../../assets/1-3.png "Endpoints")
 
 Proceed to the next step:
 
@@ -38,11 +38,11 @@ Go to and bookmark [helper app](https://bitcoin.talaikis.com/)
 
 Paste your API key:
 
-![Enter API key in this box](../assets/2-1.png "Enter API key in this box")
+![Enter API key in this box](../../assets/2-1.png "Enter API key in this box")
 
 Click Submit and you'll see something like this:
 
-![Bitcoin signals](../assets/2-2.png "Bitcoin signals")
+![Bitcoin signals](../../assets/2-2.png "Bitcoin signals")
 
 Now you can use signals from the strategies you want.
 
