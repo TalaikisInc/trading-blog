@@ -118,7 +118,7 @@ module.exports = {
               }
             `,
             output: "/feed.rss",
-            title: "BlueBlood Trading Blog Feed",
+            title: "BlueBlood Trading Signals Blog Feed",
           },
         ],
       },
