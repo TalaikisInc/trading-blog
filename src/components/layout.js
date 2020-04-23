@@ -88,7 +88,7 @@ const Layout = ({ location, title, children }) => {
       <main>{ children }</main>
       <footer>
         <p className="copyright">
-          © {new Date().getFullYear()}, Developed by <a href="https://talaikis.com">Talaikis Ltd.</a> | <a href="/rss.xml">RSS</a>
+          © {new Date().getFullYear()}, Developed by <a href="https://talaikis.com">Talaikis Ltd.</a> | <a href="/feed.rss">RSS</a>
         </p>
       </footer>
     </div>
