@@ -3,6 +3,7 @@ title: Bitcoin S trading strategy
 date: "2020-03-01"
 image: https://blue-images.talaikis.com/s-returns.png
 description: BlueBlood quantitative Bitcoin S trading strategy signals.
+tags: ["trading", "strategy", "bitcoin", "statistics"]
 ---
 
 ## What is Bitcoin S?

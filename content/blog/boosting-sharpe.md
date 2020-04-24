@@ -3,6 +3,7 @@ title: Sizing strategy boosting Sharpe ratio from 3.28 to 3.5
 date: "2020-04-04"
 image: https://blue-images.talaikis.com/position1.png
 description: Simple sizing strategy boosting Sharpe ratio from 3.28 to 3.5.
+tags: ["sharpe", "statistics", "bitcoin", "strategy"]
 ---
 
 I will be using one of the Bitcoin arbitrage strategies.

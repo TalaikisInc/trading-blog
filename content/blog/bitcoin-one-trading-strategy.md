@@ -3,6 +3,7 @@ title: Bitcoin One trading strategy
 date: "2020-03-01"
 image: https://blue-images.talaikis.com/one-returns.png
 description: BlueBlood quantitative Bitcoin One trading strategy signals.
+tags: ["trading", "strategy", "bitcoin"]
 ---
 
 ## What is Bitcoin One?

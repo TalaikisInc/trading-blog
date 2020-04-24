@@ -3,6 +3,7 @@ title: Components of a quantitative trading strategy
 date: "2020-03-12"
 image: https://blueblood.talaikis.com/static/strategy-components.png
 description: Basic components of the quantitative trading strategies.
+tags: ["quant", "strategy"]
 ---
 
 Probably the simplest ever structure of quantitative trading strategy was proposed in a book "Inside the Black Box: A Simple Guide to Quantitative and High Frequency Trading" by Rishi K. Narang:

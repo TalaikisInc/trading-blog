@@ -3,6 +3,7 @@ title: Bitcoin arbitrage trading strategies are now live
 date: "2020-04-15"
 image: https://arb-images.talaikis.com/arb-3-reinvested.png
 description: Bitcoin arbitrage trading strategies are live.
+tags: ["arbitrage", "trading", "bitcoin"]
 ---
 
 I have released daily Bitcoin arbitrage strategies on an API. Currently there are slightly more than a hundred of them, all of them use one algorithm.

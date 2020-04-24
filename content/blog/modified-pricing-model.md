@@ -3,6 +3,7 @@ title: Modified pricing model for arbitrage strategies
 date: "2020-04-18"
 image: https://blue-images.talaikis.com/modpricing1.png
 description: Exploring modified pricing model for Bitcoin arbitrage strategies.
+tags: ["bitcoin", "execution", "strategy"]
 ---
 
 Modified pricing for [arbitrage strategies](/bitcoin-arbitrage-strategies-live) is a statistics derived metric, which allows to improve profits of the arbitrage strategies.

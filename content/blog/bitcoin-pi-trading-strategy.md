@@ -3,6 +3,7 @@ title: Bitcoin Pi trading strategy
 date: "2020-03-01"
 image: https://blue-images.talaikis.com/pi-returns.png
 description: BlueBlood quantitative Bitcoin Pi trading strategy signals.
+tags: ["trading", "strategy", "bitcoin", "pattern recognition"]
 ---
 
 ## What is Bitcoin Pi?

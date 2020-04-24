@@ -3,6 +3,7 @@ title: Bitcoin V trading strategy
 date: "2020-04-15"
 image: https://blue-images.talaikis.com/v-returns.png
 description: BlueBlood quantitative Bitcoin V trading strategy signals.
+tags: ["trading", "strategy", "bitcoin", "volatility"]
 ---
 
 ## What is Bitcoin V?

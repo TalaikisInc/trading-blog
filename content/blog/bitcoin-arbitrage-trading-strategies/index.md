@@ -3,6 +3,7 @@ title: Introducing Bitcoin arbitrage trading strategies
 date: "2020-04-03"
 image: https://blue-images.talaikis.com/arb-1-returns.png
 description: Ins and outs for Bitcoin arbitrage trading strategies.
+tags: ["arbitrage", "trading", "bitcoin"]
 ---
 
 Our arbitrage strategies usually will probably be always invested, price arbitrage strategies between two exchanges.

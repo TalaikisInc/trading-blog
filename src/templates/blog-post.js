@@ -6,6 +6,20 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
+const Tags = ({ tags }) => {
+  return tags.map((tag, i, arr) => {
+    if (i === arr.length - 1) {
+      return (
+        <a href={`/tags/${tag}`}>{ tag }</a>
+      )
+    } else {
+      return (
+        <><a href={`/tags/${tag}`}>{ tag }</a>, </>
+      )
+    }
+  })
+}
+
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
@@ -25,16 +39,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: 0,
             }}
           >
-            {post.frontmatter.title}
+            { post.frontmatter.title }
           </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
+          <p style={{ ...scale(-1 / 5), display: `block`, marginBottom: rhythm(1) }}>
+            { post.frontmatter.date } | <Tags tags={post.frontmatter.tags} />
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -92,7 +100,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
+        tags
       }
     }
   }

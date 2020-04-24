@@ -16,13 +16,7 @@ const Layout = ({ location, title, children }) => {
           marginTop: 50,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
+        <Link style={{ boxShadow: `none`, color: `inherit` }} to={`/`} >
           { title }
         </Link>
       </h1>
@@ -35,14 +29,8 @@ const Layout = ({ location, title, children }) => {
           marginTop: 50,
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
+        <Link style={{ boxShadow: `none`, color: `inherit` }} to={`/`}>
+          { title }
         </Link>
       </h3>
     )

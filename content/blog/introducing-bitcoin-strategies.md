@@ -3,6 +3,7 @@ title: Introducing Bitcoin Strategies
 date: "2020-03-11"
 image: https://blue-images.talaikis.com/idx-returns.png
 description: Quantitative bitcoin trading strategies API will soon be live.
+tags: ["bitcoin", "strategy", "statistics"]
 ---
 
 ## Strategies

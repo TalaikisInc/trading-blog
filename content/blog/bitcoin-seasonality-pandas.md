@@ -3,6 +3,7 @@ title: Example Bitcoin seasonality strategy with Pandas
 date: "2020-03-17"
 image: https://blue-images.talaikis.com/season2.png
 description: Bitcoin weekday seasonality example strategy using Pandas package.
+tags: ["seasonality", "strategy", "bitcoin"]
 ---
 
 OK, my plan for this strategy is as follows:

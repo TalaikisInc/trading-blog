@@ -3,6 +3,7 @@ title: Bitcoin S 3.0 trading strategy
 date: "2020-03-01"
 image: https://blue-images.talaikis.com/s-3-returns.png
 description: BlueBlood quantitative Bitcoin S 3.0 trading strategy signals.
+tags: ["trading", "strategy", "bitcoin"]
 ---
 
 ## What is Bitcoin S 3.0?
@@ -11,7 +12,7 @@ Bitcoin S 3.0 is quantitative trading strategy in Bitcoin, which uses [quantitat
 
 Bitcoin S 3.0 is long only, weekly Bitcoin trading startegy, using several other strategies. It's similar to [portfolio](/bitcoin-idx-trading-strategy), but I want portfolio to be daily only, so I put this under strategies category.
 
-![Bitcoin S 3.0 Returns](https://blue-images.talaikis.com/f-returns.png "Bitcoin S 3.0 Returns")
+![Bitcoin S 3.0 Returns](https://blue-images.talaikis.com/s-3-returns.png "Bitcoin S 3.0 Returns")
 
 * [More Bitcoin S 3.0 stats](/performance)
 * [Initial post](/introducing-bitcoin-strategies)

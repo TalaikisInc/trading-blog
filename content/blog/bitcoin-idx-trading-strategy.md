@@ -3,6 +3,7 @@ title: Bitcoin trading strategies portfolio
 date: "2020-03-01"
 image: https://blue-images.talaikis.com/idx-returns.png
 description: BlueBlood quantitative Bitcoin trading strategies portfolio signals.
+tags: ["trading", "strategy", "bitcoin"]
 ---
 
 ## What is Bitcoin strategies portfolio?

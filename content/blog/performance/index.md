@@ -2,6 +2,7 @@
 title: Performance
 date: "2020-01-01"
 description: BlueBlood quantitative tading strategies performance
+tags: ["performance", "trading", "bitcoin"]
 ---
 
 ## Strategies

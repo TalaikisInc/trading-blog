@@ -2,6 +2,7 @@
 title: FAQ
 date: "2020-01-01"
 description: Frequenty Asked Questions about BlueBlood services.
+tags: ["info"]
 ---
 
 * [Can I earn more than your performance?](#6)

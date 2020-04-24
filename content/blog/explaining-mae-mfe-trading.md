@@ -3,6 +3,7 @@ title: Explaining MAE and MFE in trading
 date: "2020-03-11"
 image: https://blue-images.talaikis.com/mae-one.png
 description: How you can profit from MAE and MFE trade execution strategies.
+tags: ["mae", "statistics"]
 ---
 
 MAE is maximum adverse excursion, the negative difference between the price the strategy recommends to buy and lowest low.

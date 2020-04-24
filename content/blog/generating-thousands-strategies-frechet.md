@@ -3,6 +3,7 @@ title: Generating thousands of trading strategies using Frechet distance
 date: "2020-03-26"
 image: https://blue-images.talaikis.com/frechet.png
 description: Generating thousands of trading strategies using Frechet distance.
+tags: ["pattern recognition", "strategy"]
 ---
 
 This one will be fun excursion to the land of the selection bias.

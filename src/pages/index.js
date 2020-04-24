@@ -19,23 +19,15 @@ const BlogIndex = ({ data, location }) => {
         return (
           <article key={node.fields.slug}>
             <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
+              <h3 style={{ marginBottom: rhythm(1 / 4), }} >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
+                  { title }
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>{ node.frontmatter.date }</small>
             </header>
             <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
+              <p dangerouslySetInnerHTML={{ __html: node.frontmatter.description || node.excerpt }} />
             </section>
           </article>
         )
@@ -63,8 +55,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            image
-            description
+            tags
           }
         }
       }

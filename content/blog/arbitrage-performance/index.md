@@ -2,6 +2,7 @@
 title: Bitcoin arbitrage trading strategies performance
 date: "2020-04-01"
 description: Bitcoin arbitrage trading strategies performance
+tags: ["arbitrage", "performance", "bitcoin", "statistics"]
 ---
 
 Only first 10 strategies will be provided here, out of total of 50+.

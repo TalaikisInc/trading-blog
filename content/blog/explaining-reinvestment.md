@@ -3,6 +3,7 @@ title: Explaining reinvestment strategy
 date: "2020-04-03"
 image: https://blue-images.talaikis.com/reinvest.png
 description: Explaining reinvestment strategy.
+tags: ["reinvesting", "strategy"]
 ---
 
 I am generating [performance of the strategies](/performance) as not reinvested and I'm doing it in order to be able to compare strategies returns instead of time value returns.

@@ -3,6 +3,7 @@ title: Bitcoin S 2.0 trading strategy
 date: "2020-03-01"
 image: https://blue-images.talaikis.com/s-2-returns.png
 description: BlueBlood quantitative Bitcoin S 2.0 trading strategy signals.
+tags: ["trading", "strategy", "bitcoin"]
 ---
 
 ## What is Bitcoin S 2.0?
@@ -11,7 +12,7 @@ Bitcoin S 2.0 is quantitative trading strategy in Bitcoin, which uses [quantitat
 
 Bitcoin S 2.0 is long only, weekly Bitcoin trading startegy, using stastistical model.
 
-![Bitcoin S 2.0 Returns](https://blue-images.talaikis.com/f-returns.png "Bitcoin S 2.0 Returns")
+![Bitcoin S 2.0 Returns](https://blue-images.talaikis.com/s-2-returns.png "Bitcoin S 2.0 Returns")
 
 * [More Bitcoin S 2.0 stats](/performance)
 * [Initial post](/introducing-bitcoin-strategies)

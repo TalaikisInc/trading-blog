@@ -3,6 +3,7 @@ title: How to start using BlueBlood Bitcoin signals
 date: "2020-03-29"
 image: ../../assets/2-2.png
 description: A to Z instruction on how to use BlueBlood Bitcoin signals.
+tags: ["trading", "bitcoin", "signals", "info"]
 ---
 
 ## Step 1 - Get API key

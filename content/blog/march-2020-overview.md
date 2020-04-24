@@ -3,6 +3,7 @@ title: Overview of March, 2020 trading performance
 date: "2020-04-13"
 image: https://blue-images.talaikis.com/idx-monthly-returns.png
 description: Overview of March, 2020 trading performance.
+tags: ["statistics"]
 ---
 
 March, 2020 was one of the best months in 2020. 4 out of 9 strategies had the best month of the year to date.

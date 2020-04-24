@@ -3,6 +3,7 @@ title: Trading Philosophy
 date: "2020-01-05"
 image: https://blueblood.talaikis.com/static/s-index.png
 description: BlueBlood\'s trading philosophy
+tags: ["trading"]
 ---
 
 BlueBlood uses advanced quantitative approaches to trading, diversification and portfolio construction.

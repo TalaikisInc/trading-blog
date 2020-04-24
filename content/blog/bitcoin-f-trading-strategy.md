@@ -3,6 +3,7 @@ title: Bitcoin F trading strategy
 date: "2020-03-01"
 image: https://blueblood.talaikis.com/static/s-index.png
 description: BlueBlood quantitative Bitcoin F trading strategy signals.
+tags: ["trading", "strategy", "bitcoin"]
 ---
 
 ## What is Bitcoin F?
