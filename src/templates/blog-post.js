@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import kebabCase from "lodash/kebabCase"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,11 +11,11 @@ const Tags = ({ tags }) => {
   return tags.map((tag, i, arr) => {
     if (i === arr.length - 1) {
       return (
-        <a href={`/tags/${tag}`}>{ tag }</a>
+        <a href={`/tags/${kebabCase(tag)}`}>{ tag }</a>
       )
     } else {
       return (
-        <><a href={`/tags/${tag}`}>{ tag }</a>, </>
+        <><a href={`/tags/${kebabCase(tag)}`}>{ tag }</a>, </>
       )
     }
   })
