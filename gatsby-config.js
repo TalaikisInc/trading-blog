@@ -39,7 +39,6 @@ module.exports = {
       },
     },
     'gatsby-remark-mathjax',
-    'gatsby-plugin-offline',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -122,18 +121,6 @@ module.exports = {
             title: "BlueBlood Trading Signals Blog Feed",
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'BlueBlood Trading Signals Blog',
-        short_name: 'BlueBlood',
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,

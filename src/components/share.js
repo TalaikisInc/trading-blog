@@ -1,26 +1,24 @@
 import React from 'react'
 import { TwitterIcon, FacebookIcon, LinkedinIcon, RedditIcon, TelegramIcon, EmailIcon, EmailShareButton, FacebookShareButton, LinkedinShareButton, RedditShareButton, TelegramShareButton, TwitterShareButton } from 'react-share'
 
-import { siteMeta } from '../../blog.config'
-
 const Share = ({ link }) => (
   <div className="share">
-    <FacebookShareButton url={`${siteMeta.siteUrl}${link}`}>
+    <FacebookShareButton url={link}>
       <FacebookIcon size={32} round={true} />
     </FacebookShareButton>
-    <TwitterShareButton url={`${siteMeta.siteUrl}${link}`}>
+    <TwitterShareButton url={link}>
       <TwitterIcon size={32} round={true} />
     </TwitterShareButton>
-    <LinkedinShareButton url={`${siteMeta.siteUrl}${link}`}>
+    <LinkedinShareButton url={link}>
       <LinkedinIcon size={32} round={true} />
     </LinkedinShareButton>
-    <RedditShareButton url={`${siteMeta.siteUrl}${link}`}>
+    <RedditShareButton url={link}>
       <RedditIcon size={32} round={true} />
     </RedditShareButton>
-    <TelegramShareButton url={`${siteMeta.siteUrl}${link}`}>
+    <TelegramShareButton url={link}>
       <TelegramIcon size={32} round={true} />
     </TelegramShareButton>
-    <EmailShareButton url={`${siteMeta.siteUrl}${link}`}>
+    <EmailShareButton url={link}>
       <EmailIcon size={32} round={true} />
     </EmailShareButton>
   </div>

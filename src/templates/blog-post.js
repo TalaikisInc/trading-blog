@@ -5,6 +5,7 @@ import kebabCase from "lodash/kebabCase"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Share from "../components/share"
 import { rhythm, scale } from "../utils/typography"
 
 const Tags = ({ tags }) => {
@@ -24,6 +25,7 @@ const Tags = ({ tags }) => {
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
+  const url = data.site.siteMetadata.siteUrl
   const { previous, next } = pageContext
 
   return (
@@ -45,13 +47,10 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <p style={{ ...scale(-1 / 5), display: `block`, marginBottom: rhythm(1) }}>
             { post.frontmatter.date } | <Tags tags={post.frontmatter.tags} />
           </p>
+          <Share link={`${url}${location}`}/>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr style={{ marginBottom: rhythm(1) }} />
         <footer>
           <Bio />
         </footer>
@@ -64,8 +63,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           justifyContent: `space-between`,
           listStyle: `none`,
           padding: 0,
-        }}
-      >
+        }}>
         <li>
           { previous && (
             <Link to={previous.fields.slug} rel="prev">
@@ -92,6 +90,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
