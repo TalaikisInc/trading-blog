@@ -12,6 +12,7 @@
     "@mdx-js/react": "^1.5.9",
     "@mdx-js/tag": "^0.20.3",
     "gatsby": "^2.20.25",
+    "gatsby-awesome-pagination": "^0.3.5",
     "gatsby-image": "^2.3.4",
     "gatsby-mdx": "^1.0.0",
     "gatsby-plugin-feed": "^2.4.3",

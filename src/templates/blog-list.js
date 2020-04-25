@@ -6,6 +6,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
+const Prev = ({ previous }) => {
+  return (
+    <Link to={previous}>
+        &laquo; Previous
+    </Link>
+  )
+}
+
 const Paginator = ({ numPages }) => {
   return Array.from({ length: numPages }, (v, i) => i + 1)
     .map((page) => {
@@ -21,17 +29,18 @@ const Paginator = ({ numPages }) => {
     })
 }
 
-const BlogIndex = ({ data, location, pageContext }) => {
+const BlogList = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-  const next = '/2'
-  const numPages = parseInt(posts.length / 10) + 1
+  const previous = pageContext.previousPagePath
+  const next = pageContext.nextPagePath
+  const numPages = pageContext.numberOfPages
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      { posts.slice(0, 10).map(({ node }) => {
+      { posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <article key={node.fields.slug}>
@@ -50,6 +59,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
         )
       })}
       <div className="pagination">
+        { previous && <Prev previous={previous} /> }
         <Paginator numPages={numPages} />
         { next && (
           <Link to={next}>
@@ -61,16 +71,16 @@ const BlogIndex = ({ data, location, pageContext }) => {
   )
 }
 
-export default BlogIndex
+export default BlogList
 
 export const pageQuery = graphql`
-  query {
+  query ($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(skip: $skip, limit: $limit, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt

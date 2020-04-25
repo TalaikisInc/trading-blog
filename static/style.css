@@ -20,3 +20,13 @@ nav {
 .share {
     padding-bottom: 1em;
 }
+
+.pagination {
+    display: inline-block;
+}
+  
+.pagination a {
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}

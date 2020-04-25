@@ -1,6 +1,7 @@
 const { resolve } = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const kebabCase = require("lodash/kebabCase")
+const { paginate } = require('gatsby-awesome-pagination')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -43,6 +44,14 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data.postRemark.edges
   const tags = result.data.tagsGroup.group
   const tagTemplate = resolve("./src/templates/tags.js")
+
+  paginate({
+    createPage,
+    items: posts,
+    itemsPerPage: 10,
+    pathPrefix: '/',
+    component: resolve('./src/templates/blog-list.js')
+  })
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
