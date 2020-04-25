@@ -58,19 +58,16 @@ const SEO = ({ description, lang, meta, title }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
-        ].concat(meta)}>
-        <script
-          type="text/javascript"
-          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-          async />
-      </Helmet>
+      ].concat(meta)}>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+    </Helmet>
   )
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: 'en',
   meta: [],
-  description: ``,
+  description: ''
 }
 
 SEO.propTypes = {

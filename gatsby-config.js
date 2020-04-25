@@ -1,76 +1,70 @@
 module.exports = {
   siteMetadata: {
-    title: `BlueBlood Trading Signals Blog`,
+    title: 'BlueBlood Trading Signals Blog',
     author: {
-      name: `Tadas Talaikis`,
+      name: 'Tadas Talaikis',
       summary: '',
     },
     description: 'BlueBlood trading signals blog.',
-    siteUrl: `https://blueblood.talaikis.com/`,
+    siteUrl: 'https://blueblood.talaikis.com/',
     social: {
       facebook: 'https://www.facebook.com/talaikis/',
-    },
+    }
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`,
+        name: 'blog'
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: 'assets'
       },
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: ['.md', '.mdx'],
-        gatsbyRemarkPlugins: [
-          `gatsby-remark-mathjax`,
-        ],
-        plugins: [
-           `gatsby-remark-mathjax`
-       ]
-      },
+        extensions: ['.md', '.mdx']
+      }
     },
-    'gatsby-remark-mathjax',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-mathjax',
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 590,
+              maxWidth: 590
             },
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: 'gatsby-remark-responsive-iframe',
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              wrapperStyle: 'margin-bottom: 1.0725rem',
             },
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`
+          'gatsby-remark-prismjs',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants'
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-137539256-1'
       },
     },
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: 'gatsby-plugin-feed',
       options: {
         query: `
           {
@@ -117,17 +111,17 @@ module.exports = {
                 }
               }
             `,
-            output: "/feed.rss",
-            title: "BlueBlood Trading Signals Blog Feed",
-          },
-        ],
-      },
+            output: '/feed.rss',
+            title: 'BlueBlood Trading Signals Blog Feed'
+          }
+        ]
+      }
     },
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: 'src/utils/typography',
       },
     }
   ],

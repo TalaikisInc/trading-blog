@@ -112,4 +112,6 @@ For now, yes, except for arbitrage strategies, because all other instruments are
 
 ### <a name="14"></a>What Sharpe formula is used?
 
-`sharpe = (returns / volatility) x sqrt{365}`
+$$
+sharpe = (returns \div volatility) \times \sqrt{365}
+$$
