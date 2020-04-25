@@ -16,7 +16,7 @@ const Tags = ({ pageContext, data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={tagHeader} description={tagHeader} />
+      <SEO title={tagHeader} description={tagHeader} url={location} />
       <Title title={tagHeader} />
       <ul>
         { edges.map(({ node }) => {
@@ -55,6 +55,7 @@ Tags.propTypes = {
       ),
     }),
   }),
+  location: PropTypes.string
 }
 
 export default Tags

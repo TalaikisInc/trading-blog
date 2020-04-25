@@ -19,7 +19,7 @@ const TagsPage = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All Tags" />
+      <SEO title="All Tags" url={location} />
       <Title title="All Tags" />
       <ul>
         { group.map(tag => (
@@ -50,6 +50,7 @@ TagsPage.propTypes = {
       }),
     }),
   }),
+  location: PropTypes.string
 }
 
 export default TagsPage

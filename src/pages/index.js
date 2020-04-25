@@ -21,7 +21,7 @@ const Paginator = ({ numPages }) => {
     })
 }
 
-const BlogIndex = ({ data, location, pageContext }) => {
+const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   const next = '/2'
@@ -29,7 +29,7 @@ const BlogIndex = ({ data, location, pageContext }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="All posts" url={location} />
       <Bio />
       { posts.slice(0, 10).map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug

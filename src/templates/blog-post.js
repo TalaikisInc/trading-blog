@@ -29,11 +29,12 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const url = data.site.siteMetadata.siteUrl
   const { previous, next } = pageContext
   const title = post.frontmatter.title
+  const image = post.frontmatter.image
   const description = post.frontmatter.description
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={title} description={description || post.excerpt} />
+      <SEO title={title} description={description || post.excerpt} url={location} image={image} />
       <article>
         <header>
           <Title title={title} />
@@ -94,6 +95,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         tags
+        image
       }
     }
   }
