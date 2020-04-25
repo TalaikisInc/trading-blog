@@ -1,8 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import kebabCase from "lodash/kebabCase"
-import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
+
+import Title from "../components/title"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const TagsPage = ({
   data: {
@@ -10,12 +13,14 @@ const TagsPage = ({
     site: {
       siteMetadata: { title },
     },
-  },
-}) => (
-  <div>
-    <Helmet title={title} />
-    <div>
-      <h1>Tags</h1>
+  }, data, location
+}) => {
+  const siteTitle = data.site.siteMetadata.title
+
+  return (
+    <Layout location={location} title={siteTitle}>
+      <SEO title="All Tags" />
+      <Title title="All Tags" />
       <ul>
         { group.map(tag => (
           <li key={tag.fieldValue}>
@@ -25,9 +30,9 @@ const TagsPage = ({
           </li>
         ))}
       </ul>
-    </div>
-  </div>
-)
+    </Layout>
+  )
+}
 
 TagsPage.propTypes = {
   data: PropTypes.shape({

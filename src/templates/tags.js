@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Title from "../components/title"
 
 const Tags = ({ pageContext, data, location }) => {
   const { tag } = pageContext
@@ -16,7 +17,7 @@ const Tags = ({ pageContext, data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={tagHeader} description={tagHeader} />
-      <h1>{ tagHeader }</h1>
+      <Title title={tagHeader} />
       <ul>
         { edges.map(({ node }) => {
           const { slug } = node.fields

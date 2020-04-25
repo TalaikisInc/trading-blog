@@ -5,6 +5,7 @@ import kebabCase from "lodash/kebabCase"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Title from "../components/title"
 import Share from "../components/share"
 import { rhythm, scale } from "../utils/typography"
 
@@ -12,11 +13,11 @@ const Tags = ({ tags }) => {
   return tags.map((tag, i, arr) => {
     if (i === arr.length - 1) {
       return (
-        <a href={`/tags/${kebabCase(tag)}`}>{ tag }</a>
+        <a href={`/tags/${kebabCase(tag)}`} key={i}>{ tag }</a>
       )
     } else {
       return (
-        <><a href={`/tags/${kebabCase(tag)}`}>{ tag }</a>, </>
+        <span key={i}><a href={`/tags/${kebabCase(tag)}`}>{ tag }</a>, </span>
       )
     }
   })
@@ -27,27 +28,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const url = data.site.siteMetadata.siteUrl
   const { previous, next } = pageContext
+  const title = post.frontmatter.title
+  const description = post.frontmatter.description
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
+      <SEO title={title} description={description || post.excerpt} />
       <article>
         <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
-            { post.frontmatter.title }
-          </h1>
+          <Title title={title} />
           <p style={{ ...scale(-1 / 5), display: `block`, marginBottom: rhythm(1) }}>
             { post.frontmatter.date } | <Tags tags={post.frontmatter.tags} />
           </p>
-          <Share link={`${url}${location}`}/>
+          <Share link={`${url}${location.pathname}`}/>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr style={{ marginBottom: rhythm(1) }} />
