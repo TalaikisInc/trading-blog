@@ -40,7 +40,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const url = data.site.siteMetadata.siteUrl
-  const { previous, next } = pageContext
+  const { previous, next, stats } = pageContext
   const title = post.frontmatter.title
   const image = post.frontmatter.image
   const description = post.frontmatter.description

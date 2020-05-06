@@ -1,6 +1,6 @@
 ---
 title: April, 2020 Bitcoin trading performance overview
-date: "2020-04-06"
+date: "2020-05-06"
 image: https://blue-images.talaikis.com/pi-2-returns.png
 description: April, 2020 Bitcoin trading performance overview
 tags: ["trading", "stats"]
