@@ -1,5 +1,14 @@
+/*
 import React from 'react'
-import fetch from 'isomorphic-unfetch'
+import { graphql, useStaticQuery } from 'gatsby'
+
+const statsData = useStaticQuery(graphql`
+  query {
+    api {
+      stats
+    }
+  }
+`)
 
 const mapping = {
   sharpe_ratio: { t: 'Sharpe ratio', p: '', typ: 1 },
@@ -25,14 +34,17 @@ const mapping = {
   max_dd_duration: { t: 'Max drawdown duration', p: ' days', typ: 0 }
 }
 
-async function Stats ({ stats }) {
-  const res = await fetch(stats)
-  const s = res.json()
+async function Stats () {
+  const stats = statsData.api.stats
+  console.log('stats')
+  console.log(stats)
+  console.log('statsData')
+  console.log(statsData)
   return (
     <ul>
       {
-        Object.keys(s).map((key, i) => {
-          const elem = <strong>{ mapping[key].typ === 0 ? s[key] : s[key].toFixed(2) }</strong>
+        Object.keys(stats).map((key, i) => {
+          const elem = <strong>{ mapping[key].typ === 0 ? stats[key] : stats[key].toFixed(2) }</strong>
           return (
             <li key={i}>
               { `${mapping[key].t}: ` } { elem } { mapping[key].p }
@@ -45,3 +57,4 @@ async function Stats ({ stats }) {
 }
 
 export default Stats
+*/

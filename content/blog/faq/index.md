@@ -19,6 +19,7 @@ tags: ["info"]
 * [Are all systems long only?](#12)
 * [Are all systems on Bitcoin only?](#13)
 * [What Sharpe formula is used?](#14)
+* [What optimization techniques are used?](#15)
 
 ### <a name="6"></a>Can I earn more than your performance?
 
@@ -115,3 +116,9 @@ For now, yes, except for arbitrage strategies, because all other instruments are
 $$
 sharpe = (returns \div volatility) \times \sqrt{365}
 $$
+
+### <a name="15"></a>What optimization techniques are used?
+
+As majority of the strategies are event based, no optimization is used. If lagging indicators are used, they are generally "half optimized" - having values that are divided by 10.
+
+It is because I don't believe in an optimization. If the alpha performs, it will perform regardless of parameters used. Best way to improve risk profile is to just use diversification between strategies.
