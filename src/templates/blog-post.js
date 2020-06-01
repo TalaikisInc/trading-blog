@@ -3,24 +3,12 @@ import { Link, graphql } from 'gatsby'
 import kebabCase from 'lodash/kebabCase'
 
 import Bio from '../components/bio'
-import Stats from '../components/stats'
+// import Stats from '../components/stats'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Title from '../components/title'
 import Share from '../components/share'
 import { rhythm, scale } from '../utils/typography'
-import { apiPageMap } from '../../pageMap'
-
-/*
-const GetStats = ({ location }) => {
-  const fileName = location.pathname.replace('/', '')
-  const isRequired = apiPageMap[fileName]
-  if (isRequired) {
-    return <Stats />
-  }
-  return <></>
-}
-*/
 
 const Tags = ({ tags }) => {
   return tags.map((tag, i, arr) => {
@@ -40,7 +28,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const url = data.site.siteMetadata.siteUrl
-  const { previous, next, stats } = pageContext
+  const { previous, next } = pageContext
   const title = post.frontmatter.title
   const image = post.frontmatter.image
   const description = post.frontmatter.description
@@ -57,7 +45,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <Share link={`${url}${location.pathname}`}/>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        { /* <GetStats location={location} /> */ }
+        {/*<Stats stats={stats} />*/}
         <hr style={{ marginBottom: rhythm(1) }} />
         <footer>
           <Bio />
@@ -70,7 +58,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           flexWrap: 'wrap',
           justifyContent: 'space-between',
           listStyle: 'none',
-          padding: 0,
+          padding: 0
         }}>
         <li>
           { previous && (

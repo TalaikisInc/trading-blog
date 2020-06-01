@@ -1,14 +1,5 @@
-/*
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-
-const statsData = useStaticQuery(graphql`
-  query {
-    api {
-      stats
-    }
-  }
-`)
+import isEmpty from 'lodash.isempty'
 
 const mapping = {
   sharpe_ratio: { t: 'Sharpe ratio', p: '', typ: 1 },
@@ -34,15 +25,10 @@ const mapping = {
   max_dd_duration: { t: 'Max drawdown duration', p: ' days', typ: 0 }
 }
 
-async function Stats () {
-  const stats = statsData.api.stats
-  console.log('stats')
-  console.log(stats)
-  console.log('statsData')
-  console.log(statsData)
+export default async function Stats ({ stats }) {
   return (
     <ul>
-      {
+      { !isEmpty(stats) ?
         Object.keys(stats).map((key, i) => {
           const elem = <strong>{ mapping[key].typ === 0 ? stats[key] : stats[key].toFixed(2) }</strong>
           return (
@@ -51,10 +37,8 @@ async function Stats () {
             </li>
           )
         })
+        : null
       }
     </ul>
   )
 }
-
-export default Stats
-*/
