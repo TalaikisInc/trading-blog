@@ -1,7 +1,7 @@
 ---
 title: May, 2020 Bitcoin trading performance overview
 date: "2020-06-01"
-image: ../assets/h1.jpg
+image: https://blue-images.talaikis.com/h1.jpg
 description: May, 2020 Bitcoin trading performance overview
 tags: ["trading", "stats"]
 ---
