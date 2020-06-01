@@ -1,7 +1,7 @@
 ---
 title: May, 2020 Bitcoin trading performance overview
 date: "2020-06-01"
-image: https://blueblood.talaikis.com/static/h1.png
+image: ../assets/h1.png
 description: May, 2020 Bitcoin trading performance overview
 tags: ["trading", "stats"]
 ---
@@ -16,6 +16,6 @@ Future plans. I am working on hourly ar minute Bitcoin bots when I can, but this
 
 Hourly bot expected performance (in sample + out of sample 1/2):
 
-![Hourly bot](https://blueblood.talaikis.com/static/h1.png "Hourly bot")
+![Hourly bot](../assets/h1.png "Hourly bot")
 
 In regards of minute performance, it is too unreal (200%/ year) to show it here, and, most possibly, impossible to achieve due to various constraints.
